@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK - PAPER - SCISSORS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="restart()">
+    <div class="root">
+
+        <!-- this is header -->
+        <div class="header">
+            <div class="container">
+                <div class="g-header">
+
+                    <div class="g-title">
+                        <p>Rock</p>
+                        <p>Paper</p>
+                        <p>Sicssors</p>
+                    </div>
+
+                    <div class="score-board">
+
+                        <div class="score-card">
+                            <p>YOUR SCORE</p>
+                            <p id="yourScore"></p>
+                        </div>
+
+                        <div class="score-card">
+                            <p>COMPUTER SCORE</p>
+                            <p id="computerScore"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- rock-paper-scissors game -->
+        <div class="section">
+            <div class="container">
+                <div class="game">
+
+                    <div class="row-1">
+                        <div class="rock card" id="rock">
+                            <img src="assets/rock.svg" alt="rock">
+                        </div>
+                        <div class="line-1">
+                            <img src="assets/Line 1.png" alt="line one">
+                        </div>
+                        <div class="scissors card" id="scissors">
+                            <img src="assets/scissors.svg" alt="scissor">
+                        </div>
+                    </div>
+
+                    <div class="row-2">
+                        <div class="line-2">
+                            <img class="line-img" src="assets/Line 1.png" alt="line one">
+                        </div>
+                        <div class="line-3">
+                            <img class="line-img" src="assets/Line 1.png" alt="line one">
+                        </div>
+                    </div>
+
+                    <div class="row-3">
+                        <div class="paper card" id="paper">
+                            <img src="assets/paper.svg" alt="paper">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- winning result -->
+                <div class="game-result">
+                    <div class="winResult">
+
+                        <div class="option user">
+                            <p>YOU PICKED</p>
+                            <div class="card" id="user">
+                                <img src="" alt="user image" id="userImage" />
+                            </div>
+                            <div id="userwin" class="pulse-anime">
+                                <div class="circle circle1"></div>
+                                <div class="circle circle2"></div>
+                                <div class="circle circle3"></div>
+                                <div class="circle circle4"></div>
+                            </div>
+                        </div>
+
+                        <div class="result">
+                            <h1 id="winner">YOU WIN</h1>
+                            <h3>AGAINST PC</h3>
+                            <button class="play-again-btn" id="play">PLAY AGAIN</button>
+                        </div>
+
+                        <div class="option computer">
+                            <p>PC PICKED</p>
+                            <div class="card" id="computer">
+                                <img src="" alt="computer image" id="computerImage" />
+                            </div>
+                            <div id="computerwin" class="pulse-anime">
+                                <div class="circle circle1"></div>
+                                <div class="circle circle2"></div>
+                                <div class="circle circle3"></div>
+                                <div class="circle circle4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- rule box -->
+        <div class="game-rules">
+            <div class="close-btn" id="close-btn">X</div>
+            <h1 class="game-rule-header">Game Rules</h1>
+            <ul type="square" class="rule-content">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                    paper,scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <div class="bottom-btn">
+            <button class="btn rule-btn" id="rule-btn">RULES</button>
+            <a href="celebration.html" class="btn next-btn" id="next-btn">NEXT</a>
+        </div>
+    </div>
+    <script src="style.js"></script>
+</body>
+
+</html>

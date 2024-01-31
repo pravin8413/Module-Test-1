@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Dangrek");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    background-color: #8CC461;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main1 {
+    height: 50vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-image: url("assets/stars.png");
+    background-size: contain;
+    background-repeat: no-repeat;  
+}
+.trophy{
+    width: 35%;
+    height: 50%;
+}
+.main2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;  
+}
+.main2 h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.5rem;   
+}
+.main2 h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+.play-btn {
+    width: 160%;
+    height: 5vh;
+    background: #FFF;
+    color: #6B6B6B;
+    font-family: "Roboto";
+    font-size: 1rem;
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid #fff;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    cursor: pointer;  
+}
+.main a{
+    margin-right: 3.5rem;
+}
+.game-rules {
+    position: absolute;
+    width: 20%;
+    right: 2.4rem;
+    bottom: 80px;
+    padding: 1rem;
+    border-radius: 13px;
+    border: 8px solid #FFF;
+    background: #004429;
+    display: none;
+}
+.btn {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    height: 7%;
+    width: 8.5%;
+    font-size: 1rem;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    cursor: pointer;
+}
+.rule-btn {
+    right: 40px;
+}
+.game-rule-h {
+    text-align: center;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+}
+.game-rules ul {
+    padding: 1rem;
+}
+.game-rules ul li {
+    margin-bottom: 0.2rem;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.game-rules ul li::marker {
+    color: #FFD600;
+    font-size: 1.4rem;
+}
+.close-btn {
+    position: absolute;
+    right: -35px;
+    top: -35px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: "Dangrek";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+/* responsive */
+@media screen and ((max-width:1280px) and (min-width:950px)) {
+    .trophy{
+        width: 50%;
+        height:60%;
+        margin-bottom: 15px;
+    }
+    .game-rules {
+        width: 250px;
+        right: 1rem;
+        padding: 0.5;
+    }
+    .game-rule-header {
+        font-size: 1.8rem;
+    }
+    .game-rules ul {
+        padding: 0.5rem;
+    } 
+    .close-btn {
+        height: 50px;
+        width: 50px;
+        font-size: 2rem;
+        right: -20px;
+        top: -25px;
+    }
+
+}
+
+@media screen and ((max-width:1100px)) {
+    .trophy{
+        width: 50%;
+        height:50%;
+        margin-bottom: 80px;
+    }
+    .game-rules{
+        width: 250px;
+        right: 20px;
+    }
+    .container {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .main2 h1 {
+        font-size: 3rem;
+    }
+    
+    .main2 h2 { 
+        font-size: 1.5rem; 
+    }
+
+    .btn {
+        height: 6.5%;
+        width: 12%;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .game-rules{
+        width: 250px;
+        right: 20px;
+    }
+    .game-rule-h {
+        font-size: 1.8rem;
+    }
+    
+    .game-rules ul {
+        padding: 0.3rem;
+    }
+    
+    .game-rules ul li {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+    }
+    .close-btn {  
+        right: -25px;
+        top: -30px;
+        height: 50px;
+        width: 50px;   
+    }
+    
+}
+@media screen and ((max-width:900px)) {
+    .trophy{
+        width: 40%;
+        height:50%;
+        margin-bottom: 15px;
+    }
+    .container {
+        height: 60%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .main {
+        align-items: start;
+        padding-top: 40px;
+    }
+    .game-rules{
+        width: 400px;
+        right: 160px;
+        bottom: 15px;
+        padding: 0.2;
+    }
+    .game-rule-h {
+        font-size: 1.3rem;  
+    }
+    
+    .game-rules ul {
+        padding: 0.5rem;
+    }
+    
+    .game-rules ul li {
+        margin-bottom: 0.1rem;
+        font-size: 0.7rem;
+    }
+
+}
+
+@media screen and ((max-width:700px)) {
+    .trophy{
+        width: 40%;
+        height:50%;
+        margin-bottom: 10px;
+    }
+    .container {
+        height: 50%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .main {
+        align-items: start;
+        padding-top: 40px;
+    }
+    .game-rules{
+        width: 400px;
+        right: 35px;
+        bottom: 70px;
+    }
+    .btn {  
+        height: 6.5%;
+        width: 16%;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and ((max-width:450px)) {
+    .trophy{
+        width: 30%;
+        height:50%;
+        margin-bottom: 10px;
+    }
+    .container {
+        height: 50%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .main {
+        align-items: start;
+        padding-top: 40px;
+    }
+    .game-rules{
+        width: 400px;
+        right: 30px;
+        bottom: 65px;
+    }
+    .btn { 
+        height: 6.5%;
+        width: 18%;
+        bottom: 10px;
+    
+    }
+}
+    
+    

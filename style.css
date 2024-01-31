@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Dangrek");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'sans-serif';
+    box-sizing: border-box;
+}
+.root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #8CC461;
+}
+
+/* header styling */
+.header {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* game_header */
+.g-header {
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 13px;
+    border: 2px solid #FFF;
+}
+.g-title {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    font-size: 2.3rem;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: normal;
+    letter-spacing: 4px;
+}
+.score-board {
+    width: 42%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.score-card {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 9px;
+    background-color: #FFF;
+    padding: 1rem;
+}
+.score-card p {
+    color: #656565;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    text-align: center;
+    margin: 0.5rem;
+}
+.score-card p:last-child {
+    color: #252525;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    line-height: normal;
+}
+
+/* section */
+.section {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* game section */
+.game {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+.row-2 {
+    height: 29%;
+}
+.card {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    cursor: pointer;
+}
+.rock {
+    border: 15px solid #0074B6;
+}
+.scissors {
+    border: 15px solid #bd00ff;
+}
+.paper {
+    border: 15px solid #ffa943;
+}
+.line-1 {
+    margin: -15px;
+}
+.line-2 {
+    margin-right: 2.5rem;
+    transform: rotate(60deg);
+}
+.line-3 {
+    transform: rotate(120deg);
+}
+
+
+/* game result */
+.game-result {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.winResult {
+    width: 100%;
+    height: 100%;
+    background-color: #8CC461;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: -2rem;
+}
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    padding: 1rem;
+    text-align: center;
+
+}
+.result h1,
+.result h3 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+    letter-spacing: 3.9px;
+    margin-bottom: 0.7rem;
+}
+.result h3 {
+    font-size: 1.2rem;
+}
+.play-again-btn {
+    width: 80%;
+    height: 5vh;
+    background: #FFF;
+    color: #6B6B6B;
+    font-family: "Roboto";
+    font-size: 0.9rem;
+    border-radius: 9px;
+    outline: none;
+    border: 1px solid #fff;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+
+/* game rules */
+.game-rules {
+    position: absolute;
+    width: 20%;
+    right: 2rem;
+    bottom: 80px;
+    padding: 1rem;
+    border-radius: 13px;
+    border: 8px solid #FFF;
+    background: #004429;
+    display: none;
+}
+.close-btn {
+    position: absolute;
+    right: -35px;
+    top: -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: red;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: "Dangrek";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 5px solid white;
+    cursor: pointer;
+
+}
+.game-rule-header {
+    text-align: center;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 1000;
+    line-height: normal;
+}
+.game-rules ul {
+    padding: 1rem;
+}
+.game-rules ul li {
+    margin-bottom: 0.2rem;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.game-rules ul li::marker {
+    color: #FFD600;
+    font-size: 1.4rem;
+}
+.bottom-btn {
+    position: absolute;
+    bottom: 1.7%;
+    width: 20%;
+    height: 9%;
+    gap: 2.5rem;
+    right: 2.6%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btn {
+    width: 40%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #FFF;
+    font-family: "Roboto";
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#next-btn {
+    display: none;
+}
+.pulse-anime {
+    position: absolute;
+    bottom: 6.5%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: transparent;
+}
+.circle {
+    position: absolute;
+    border-radius: 100%;
+    animation: animate 1.3s linear infinite;
+}
+.circle1 {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(29, 168, 43, 0.4);
+}
+.circle2 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(29, 168, 43, 0.65);
+    bottom: 9%;
+    left: 8.5%;
+}
+.circle3 {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(26, 151, 39, 0.8);
+    bottom: 13%;
+    left: 13%;
+}
+.circle4 {
+    width: 180px;
+    height: 180px;
+    background-color: rgb(16, 142, 29);
+}
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/* responsive */
+
+@media screen and ((max-width:1280px)) {
+    .game-rules {
+        width: 23%;
+        right: 1rem;
+        padding: 0.5;
+    }
+    .game-rule-header {
+        font-size: 1.8rem;
+    }
+    .game-rules ul {
+        padding: 0.5rem;
+    }
+    .close-btn {
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+        right: -25px;
+        top: -25px;
+    }
+    .game-result {
+        width: 65%;
+    }
+    .card {
+        height: 140px;
+        width: 140px;
+
+    }
+    .row-2 {
+        height: 22%;
+    }
+    .result {
+        padding-top: 60px;
+    }
+}
+
+@media screen and ((max-width:1000px)) {
+
+    .container {
+        width: 60%;
+    }
+    .card {
+        height: 130px;
+        width: 130px;
+    }
+    .row-2 {
+        height: 15%;
+    }
+    .result h1 {
+        font-size: 1.1rem;
+    }
+    .result h3 {
+        font-size: 0.8rem;
+    }
+    .game-rules {
+        width: 250px;
+        right: 1rem;
+        padding: 0.5;
+    }
+    .btn {
+        width: 60%;
+    }
+    .g-title {
+        width: 50%;
+        font-size: 1.8rem;
+    }
+    .score-board {
+        width: 50%;
+        height: 85%;
+    }
+    .score-card {
+        height: 90%;
+
+    }
+    .score-card p {
+        font-size: 0.9rem;
+    }
+    .score-card p:last-child {
+        font-size: 3rem;
+    }
+    .game-rule-header {
+        font-size: 1.8rem;
+    }
+    .game-rules ul li {
+        font-size: 0.75rem;
+    }
+    .circle1 {
+        bottom: -1%;
+    }
+    .circle2 {
+        bottom: 6.5%;
+        left: 8.5%;
+    }
+    .circle3 {
+        bottom: 11.5%;
+        left: 13%;
+    }
+    .circle4 {
+        bottom: 19.5%;
+    }
+
+}
+
+@media screen and ((max-width:900px)) {
+    .header {
+        padding-top: 5px;
+        width: 100%;
+        height: 22vh;
+    }
+    .container {
+        width: 75%;
+    }
+    .g-header {
+        height: 20vh;
+        width: 80%;
+    }
+    .g-title {
+        font-size: 1.5rem;
+    }
+    .score-board {
+        width: 45%;
+        height: 100%;
+    }
+    .score-card {
+        height: 100%;
+        width: 50%;
+    }
+    .score-card p {
+        font-size: 0.8rem;
+    }
+    .score-card p:last-child {
+        font-size: 2rem;
+    }
+    .section {
+        height: 50vh;
+    }
+
+    /* game section */
+    .game {
+        width: 90%;
+        height: 50vh;
+    }
+    .row-2 {
+        height: 20%;
+    }
+    .card {
+        height: 130px;
+        width: 130px;
+    }
+    .line-1 {
+        margin: -10px;
+    }
+    .line-2 {
+        margin-right: 2rem;
+    }
+    .result{
+        z-index: 2;
+    }
+    .result h1 {
+        font-size: 1rem;
+    }
+    .result h3 {
+        font-size: 0.8rem;
+    }
+    .play-again-btn {
+        width: 100%;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    .circle{
+        z-index: 1;
+    }
+    .circle1 {
+        bottom: 50%;
+    }
+    .circle2 {
+        bottom: 58%;
+        left: 8.5%;
+    }
+    .circle3 {
+        bottom: 63%;
+        left: 13%;
+    }
+    .circle4 {
+        bottom: 67%;
+    }
+    .game-rules {
+        width: 400px;
+        height: 200px;
+        right: 8.5rem;
+        bottom: 1rem;
+    }
+    .game-rule-header {
+        font-size: 1.3rem;
+    }
+    .game-rules ul {
+        padding-left: 15px;
+    }
+    .game-rules ul li {
+        font-size: 0.6rem;
+    }
+    .btn {
+        width: 60%;
+        
+    }
+}
+
+@media screen and ((max-width:610px)) {
+    .header {
+        padding-top: 5px;
+        width: 100%;
+        height: 20vh;
+        align-items: center;
+        background-color: #004429;
+    }
+    .container {
+        width: 90%;
+    }
+    .g-header {
+        height: 18vh;
+        width: 80%;
+    }
+    .g-title {
+        font-size: 1.5rem;
+    }
+    .score-board {
+        width: 45%;
+        height: 100%;
+    }
+    .score-card {
+        height: 100%;
+        width: 50%;
+    }
+    .score-card p {
+        font-size: 0.7rem;
+    }
+    .score-card p:last-child {
+        font-size: 1.5rem;
+    }
+    .result{
+        z-index: 2;
+    }
+    .circle1 {
+        bottom: 52%;
+    }
+    .circle2 {
+        bottom: 60%;
+        left: 8.5%;
+    }
+    .circle3 {
+        bottom: 65%;
+        left: 13%;
+    }
+    .circle4 {
+        bottom: 73%;
+    }
+    .game-rules {
+        width: 350px;
+        height: 220px;
+        right: 8.5rem;
+        bottom: 1rem;
+    }
+    .game-rule-header {
+        font-size: 1.3rem;
+    }
+    .game-rules ul {
+        padding-left: 15px;
+    }
+    .game-rules ul li {
+        font-size: 0.6rem;
+    }
+    .btn {
+        width: 70%;
+    }
+}
